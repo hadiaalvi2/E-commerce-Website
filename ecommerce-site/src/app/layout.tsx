@@ -1,35 +1,27 @@
-"use client";
-
+import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider, ThemeContext, ThemeContextType } from "@/context/ThemeContext";
-import { CartProvider, CartContext, CartContextType } from "@/context/CartContext";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import React, { useContext } from "react";
+import { ThemeProvider } from "@/context/ThemeProvider";
+import { CartProvider } from "@/context/CartProvider";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "ShopHub - Your Premier E-commerce Destination",
+  description: "Discover amazing products at great prices. Your one-stop shop for quality items.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <CartProvider>
-            <LayoutContent>{children}</LayoutContent>
+            {children}
           </CartProvider>
         </ThemeProvider>
       </body>
     </html>
-  );
-}
-
-function LayoutContent({ children }: { children: React.ReactNode }) {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext) as ThemeContextType;
-  const { cartItemsCount } = useContext(CartContext) as CartContextType;
-
-  return (
-    <>
-      <Navbar cartItemsCount={cartItemsCount} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <main className="min-h-screen">{children}</main>
-      <Footer darkMode={darkMode} />
-    </>
   );
 }

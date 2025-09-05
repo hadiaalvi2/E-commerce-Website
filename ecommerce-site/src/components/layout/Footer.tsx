@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
               ShopHub
             </div>
             <p className="text-gray-300 text-sm">
@@ -26,13 +26,13 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               We're committed to providing the best shopping experience.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://www.facebook.com/" className="text-gray-400 hover:text-pink-400 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://x.com/" className="text-gray-400 hover:text-pink-400 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fdirect%2Finbox%2F%3F__coig_login%3D1#" className="text-gray-400 hover:text-pink-400 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
