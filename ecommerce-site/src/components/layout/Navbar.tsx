@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
-              ShopHub
+              Shopie
             </div>
           </Link>
 

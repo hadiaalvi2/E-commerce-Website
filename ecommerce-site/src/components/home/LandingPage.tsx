@@ -63,7 +63,7 @@ const LandingPage = () => {
   return (
     <div className="space-y-20 bg-cream-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-cream-100 via-cream-200 to-cream-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-gray-900 dark:text-white">
+      <section className="relative overflow-hidden bg-gray-900text-white">
         <div className="absolute inset-0 bg-white/30 dark:bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -256,7 +256,7 @@ const LandingPage = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="gray-900 ">
+      <section className="gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Stay Updated with ShopHub
