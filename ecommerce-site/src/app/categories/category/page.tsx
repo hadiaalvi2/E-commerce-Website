@@ -20,7 +20,7 @@ interface Product {
   };
 }
 
-const CategoryProductsPage = () => {
+  const CategoryProductsPage = () => {
   const params = useParams();
   const categoryName = decodeURIComponent(params.category as string);
   const [products, setProducts] = useState<Product[]>([]);
@@ -129,7 +129,7 @@ const CategoryProductsPage = () => {
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Breadcrumb */}
+        {/* BreadCrumb */}
         <div className="mb-6">
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-gray-500 hover:text-pink-600 transition-colors">Home</Link>
