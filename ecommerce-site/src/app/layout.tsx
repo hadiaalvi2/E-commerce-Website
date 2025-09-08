@@ -6,13 +6,13 @@ import { CartProvider } from "@/context/CartProvider";
 export const metadata: Metadata = {
   title: {
     default: "Shopie - Your Premier E-commerce Destination",
-    template: "%s | ShopHub"
+    template: "%s | Shopie"
   },
   description: "Discover amazing products at unbeatable prices. Your premium shopping destination with curated collections, exclusive deals, and exceptional customer service.",
   keywords: ["e-commerce", "online shopping", "deals", "electronics", "fashion", "home", "garden", "premium products"],
-  authors: [{ name: "ShopHub Team" }],
-  creator: "ShopHub",
-  publisher: "ShopHub",
+  authors: [{ name: "Shopie Team" }],
+  creator: "Shopie",
+  publisher: "Shopie",
   robots: {
     index: true,
     follow: true,
@@ -27,25 +27,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://shophub.com',
+    url: 'https://Shopie.com',
     title: 'Shopie - Your Premier E-commerce Destination',
     description: 'Discover amazing products at unbeatable prices. Premium shopping with exclusive deals.',
-    siteName: 'ShopHub',
+    siteName: 'Shopie',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ShopHub - Premier E-commerce Destination',
+        alt: 'Shopie - Premier E-commerce Destination',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ShopHub - Your Premier E-commerce Destination',
+    title: 'Shopie - Your Premier E-commerce Destination',
     description: 'Discover amazing products at unbeatable prices. Premium shopping with exclusive deals.',
     images: ['/twitter-image.jpg'],
-    creator: '@shophub',
+    creator: '@Shopie',
   },
   icons: {
     icon: [
@@ -110,12 +110,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "ShopHub",
-              "url": "https://shophub.com",
+              "name": "Shopie",
+              "url": "https://Shopie.com",
               "description": "Your premier e-commerce destination for quality products at amazing prices",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://shophub.com/search?q={search_term_string}",
+                "target": "https://Shopie.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -129,12 +129,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Shopie",
-              "url": "https://shophub.com",
-              "logo": "https://shophub.com/logo.png",
+              "url": "https://Shopie.com",
+              "logo": "https://Shopie.com/logo.png",
               "sameAs": [
-                "https://www.facebook.com/shophub",
-                "https://www.twitter.com/shophub",
-                "https://www.instagram.com/shophub"
+                "https://www.facebook.com/Shopie",
+                "https://www.twitter.com/Shopie",
+                "https://www.instagram.com/Shopie"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -164,7 +164,7 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
-                  var theme = localStorage.getItem('shophub_theme');
+                  var theme = localStorage.getItem('Shopie');
                   if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark');
                   }
