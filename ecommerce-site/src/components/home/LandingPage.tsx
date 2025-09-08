@@ -61,9 +61,9 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="space-y-20 bg-cream-50 dark:bg-gray-900">
+    <div className="space-y-20 bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gray-900text-white">
+      <section className="relative overflow-hidden bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         <div className="absolute inset-0 bg-white/30 dark:bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -183,34 +183,10 @@ const LandingPage = () => {
         </div>
       </section>
 
+      <br></br><br></br>
 
 
-      {/* Newsletter Section */}
-      <section className="gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Stay Updated with ShopHub
-          </h2>
-          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-            Get exclusive deals, new product updates, and shopping tips delivered straight to your inbox.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-pink-300"
-            />
-            <button className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition-colors duration-300 whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
 
-          <p className="text-pink-200 text-sm mt-4">
-            No spam, unsubscribe at any time
-          </p>
-        </div>
-      </section>
     </div>
   );
 };
