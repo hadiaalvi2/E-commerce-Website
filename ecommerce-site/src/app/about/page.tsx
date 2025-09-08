@@ -1,5 +1,5 @@
+
 import AboutPage from '../../components/about/AboutPage';
-import { useCart } from '@/context/CartProvider';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
@@ -8,5 +8,9 @@ export const metadata = {
 };
 
 export default function About() {
-  return <AboutPage />;
+  return (
+    <MainLayout>
+      <AboutPage />
+    </MainLayout>
+  );
 }
