@@ -17,11 +17,11 @@ const CartPage = () => {
     return (
       <MainLayout>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
+          <div className="text-center bg-background text-foreground py-16 rounded-lg">
             <div className="mb-8">
-              <ShoppingBag className="mx-auto h-24 w-24 text-gray-400" />
+              <ShoppingBag className="mx-auto h-24 w-24 text-gray-400 dark:text-gray-500" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl font-bold mb-4">
               Your Cart is Empty
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-md mx-auto">
@@ -54,7 +54,7 @@ const CartPage = () => {
           </Link>
           
           <div className="flex items-center justify-between">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-4xl font-bold text-foreground">
               Shopping Cart
             </h1>
             <button
@@ -85,7 +85,7 @@ const CartPage = () => {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <ShoppingBag className="h-8 w-8 text-gray-400" />
+                        <ShoppingBag className="h-8 w-8 text-gray-400 dark:text-gray-500" />
                       </div>
                     )}
                   </div>
@@ -102,7 +102,7 @@ const CartPage = () => {
 
                   {/* Quantity Controls */}
                   <div className="flex items-center space-x-3">
-                    <div className="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
+                    <div className="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg text-foreground">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-l-lg"
@@ -110,7 +110,7 @@ const CartPage = () => {
                       >
                         <Minus className="h-4 w-4" />
                       </button>
-                      <span className="px-4 py-2 font-medium min-w-[60px] text-center text-gray-900 dark:text-white">
+                      <span className="px-4 py-2 font-medium min-w-[60px] text-center">
                         {item.quantity}
                       </span>
                       <button
@@ -226,7 +226,7 @@ const CartPage = () => {
 
         {/* Related/Recommended Products */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900z dark:text-white mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
             You might also like
           </h2>
           
@@ -235,7 +235,7 @@ const CartPage = () => {
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-1">
                 <div className="aspect-square bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                  <ShoppingBag className="h-16 w-16 text-gray-400" />
+                  <ShoppingBag className="h-16 w-16 text-gray-400 dark:text-gray-500" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-2">

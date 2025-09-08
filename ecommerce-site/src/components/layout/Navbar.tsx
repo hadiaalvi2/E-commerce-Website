@@ -54,26 +54,6 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
             </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
-            <div className="relative w-full">
-              <Search className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                darkMode ? 'text-gray-400' : 'text-gray-500'
-              }`} />
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className={`w-full pl-10 pr-4 py-2 rounded-lg border focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
-                  darkMode 
-                    ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:bg-gray-700' 
-                    : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:bg-white'
-                }`}
-              />
-            </div>
-          </div>
-
           {/* Right side icons */}
           <div className="flex items-center space-x-2">
             {/* Dark mode toggle */}
@@ -127,24 +107,6 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
             darkMode ? 'border-gray-700' : 'border-gray-200'
           }`}>
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {/* Mobile search */}
-              <div className="relative mb-3">
-                <Search className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 ${
-                  darkMode ? 'text-gray-400' : 'text-gray-500'
-                }`} />
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className={`w-full pl-10 pr-4 py-2 rounded-lg border focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all ${
-                    darkMode 
-                      ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400' 
-                      : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500'
-                  }`}
-                />
-              </div>
-
               <Link 
                 href="/" 
                 className={`block hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-base font-medium ${

@@ -87,8 +87,8 @@ interface Product {
   if (loading) {
     return (
       <MainLayout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600"></div>
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600 dark:border-pink-400"></div>
         </div>
       </MainLayout>
     );
@@ -97,7 +97,7 @@ interface Product {
   if (products.length === 0 && !loading) {
     return (
       <MainLayout>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-background text-foreground">
           <Link 
             href="/categories"
             className="inline-flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors mb-6"
@@ -106,8 +106,8 @@ interface Product {
             <span>Back to Categories</span>
           </Link>
           
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">📦</div>
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">📦</div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Category Not Found
             </h1>
@@ -128,14 +128,14 @@ interface Product {
 
   return (
     <MainLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-background text-foreground">
         {/* BreadCrumb */}
         <div className="mb-6">
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-gray-500 hover:text-pink-600 transition-colors">Home</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
             <Link href="/categories" className="text-gray-500 hover:text-pink-600 transition-colors">Categories</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
             <span className="text-gray-900 dark:text-white font-medium capitalize">{categoryName}</span>
           </nav>
         </div>
@@ -164,7 +164,7 @@ interface Product {
           <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 dark:text-gray-500" />
               <input
                 type="text"
                 placeholder="Search products..."
@@ -225,8 +225,8 @@ interface Product {
 
         {/* Products Grid/List */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
               No products found
             </h3>
@@ -273,7 +273,7 @@ interface Product {
                             className={`w-4 h-4 ${
                               i < Math.floor(product.rating.rate) 
                                 ? 'fill-yellow-400 text-yellow-400' 
-                                : 'text-gray-300'
+                                : 'text-gray-300 dark:text-gray-600'
                             }`} 
                           />
                         ))}
@@ -314,7 +314,7 @@ interface Product {
         )}
 
         {/* Category Description */}
-        <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 lg:p-12">
+        <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 lg:p-12 text-foreground">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 capitalize">
               About {categoryName}

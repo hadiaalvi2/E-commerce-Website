@@ -79,8 +79,8 @@ const CategoriesPage = () => {
   if (loading) {
     return (
       <MainLayout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600"></div>
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600 dark:border-pink-400"></div>
         </div>
       </MainLayout>
     );
@@ -88,16 +88,13 @@ const CategoriesPage = () => {
 
   return (
     <MainLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-background text-foreground">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4">
             Shop by <span className="text-pink-600 dark:text-pink-400">Category</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            Explore our carefully curated collections and find exactly what you're looking for
-          </p>
-
+          
           {/* Search */}
           <div className="max-w-md mx-auto relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -113,8 +110,8 @@ const CategoriesPage = () => {
 
         {/* Categories Grid */}
         {filteredCategories.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
               No categories found
             </h3>
@@ -195,20 +192,18 @@ const CategoriesPage = () => {
         )}
 
         {/* Featured Categories Section */}
-        <div className="mt-20 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mt-20 text-center bg-background text-foreground py-16 rounded-lg">
+          <h2 className="text-3xl font-bold mb-4">
             Why Shop by Category?
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
-            Shopping by category helps you find exactly what you need faster and discover new products you'll love
-          </p>
+          
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-full mb-4">
                 <Search className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Easy Discovery</h3>
+              <h3 className="text-xl font-semibold mb-2">Easy Discovery</h3>
               <p className="text-gray-600 dark:text-gray-300">Find products quickly by browsing organized categories</p>
             </div>
 
@@ -216,7 +211,7 @@ const CategoriesPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-full mb-4">
                 <ShoppingBag className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Curated Selection</h3>
+              <h3 className="text-xl font-semibold mb-2">Curated Selection</h3>
               <p className="text-gray-600 dark:text-gray-300">Each category features hand-picked, quality products</p>
             </div>
 
@@ -224,30 +219,30 @@ const CategoriesPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 rounded-full mb-4">
                 <Zap className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Latest Trends</h3>
+              <h3 className="text-xl font-semibold mb-2">Latest Trends</h3>
               <p className="text-gray-600 dark:text-gray-300">Stay updated with the newest arrivals in each category</p>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="mt-16 text-center bg-gradient-to-r from-pink-600 to-purple-600 dark:from-gray-700 dark:to-gray-900 rounded-3xl p-12 text-white">
+          <h2 className="text-3xl font-bold mb-4">
             Can't Find What You're Looking For?
           </h2>
-          <p className="text-pink-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-pink-100 dark:text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Browse all our products or use our search feature to find exactly what you need
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/products"
-              className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-colors"
+              className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-colors dark:bg-pink-600 dark:text-white dark:hover:bg-pink-700"
             >
               View All Products
             </Link>
             <Link
               href="/"
-              className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-full font-semibold text-lg transition-colors"
+              className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-full font-semibold text-lg transition-colors dark:border-pink-400 dark:text-pink-400 dark:hover:bg-pink-400 dark:hover:text-white"
             >
               Back to Home
             </Link>

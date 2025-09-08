@@ -16,19 +16,19 @@ const AboutPage = () => {
       name: 'John Park',
       role: 'Founder & CEO',
       image: '/api/placeholder/300/300',
-      description: 'Passionate about bringing quality products to customers worldwide.'
+      description: 'Visionary leader with a passion for innovation and customer satisfaction.',
     },
     {
-      name: 'Michael Chen',
+      name: 'Chris Chen',
       role: 'Head of Operations',
       image: '/api/placeholder/300/300',
-      description: 'Ensuring smooth operations and exceptional customer service.'
+      description: 'Ensures smooth operations and exceptional service delivery.',
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Micheal Bay',
       role: 'Product Manager',
       image: '/api/placeholder/300/300',
-      description: 'Curating the best products for our valued customers.'
+      description: 'Drives product excellence and oversees quality assurance.',
     }
   ];
 
