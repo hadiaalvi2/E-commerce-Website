@@ -15,7 +15,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const { cartItemsCount } = useCart();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col ${darkMode ? 'dark' : ''}`}>
       <Navbar 
         cartItemsCount={cartItemsCount} 
         darkMode={darkMode} 
