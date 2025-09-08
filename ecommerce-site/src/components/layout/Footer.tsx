@@ -90,15 +90,9 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               © 2024 ShopHub. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
-              </Link>
+               <p className="block text-gray-300 text-sm">Privacy Policy</p>
+                <p className="block text-gray-300 text-sm">Terms & Conditions</p>
+                <p className="block text-gray-300 text-sm">Returns & Exchanges</p>
             </div>
           </div>
         </div>
