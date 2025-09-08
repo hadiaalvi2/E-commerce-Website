@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-pink-600 bg-clip-text text-transparent">
               Shopie
             </div>
           </Link>
@@ -35,6 +35,11 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
               }`}>
                 Home
               </Link>
+              <Link href="/about" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
+                darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
+              }`}>
+                About
+              </Link>
               <Link href="/products" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
                 darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
               }`}>
@@ -45,11 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
               }`}>
                 Categories
               </Link>
-              <Link href="/about" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
-                darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
-              }`}>
-                About
-              </Link>
+              
             </div>
           </div>
 
