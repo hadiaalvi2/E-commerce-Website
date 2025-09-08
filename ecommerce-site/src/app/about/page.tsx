@@ -7,3 +7,6 @@ export const metadata = {
   description: 'Learn about ShopHub - your trusted partner in quality products and exceptional shopping experiences.',
 };
 
+export default function About() {
+  return <AboutPage />;
+}
