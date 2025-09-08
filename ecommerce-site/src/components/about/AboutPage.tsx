@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Users, Target, Award, Heart, ShoppingBag, Truck, Shield, Headphones, Star, CheckCircle } from 'lucide-react';
+import { Users, Target, Award, Heart, ShoppingBag, Truck, Shield, Headphones, Star, CheckCircle, Link } from 'lucide-react';
 
 const AboutPage = () => {
   const stats = [
@@ -74,10 +74,7 @@ const AboutPage = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
               About <span className="text-pink-600 dark:text-pink-400">ShopHub</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto px-4">
-              We're more than just an e-commerce store. We're your trusted partner in finding 
-              quality products that enhance your lifestyle.
-            </p>
+            
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 pt-8 max-w-6xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
@@ -141,9 +138,7 @@ const AboutPage = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Our <span className="text-pink-600 dark:text-pink-400">Values</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-              These core principles guide everything we do and shape the experience we create for our customers.
-            </p>
+            
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -166,9 +161,7 @@ const AboutPage = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Meet Our <span className="text-pink-600 dark:text-pink-400">Team</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
-            The passionate individuals working behind the scenes to make your shopping experience exceptional.
-          </p>
+         
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -200,10 +193,7 @@ const AboutPage = () => {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
                 Why Choose <span className="text-pink-600 dark:text-pink-400">ShopHub?</span>
               </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                We're committed to providing an exceptional shopping experience that goes 
-                beyond just selling products. Here's what sets us apart from the competition.
-              </p>
+           
               
               <div className="grid gap-3 sm:gap-4">
                 {features.map((feature, index) => (
@@ -276,11 +266,15 @@ const AboutPage = () => {
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and discover amazing products at unbeatable prices</p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/products"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+            >
+              <Link className="w-5 h-5 mr-2" />
               Browse Products
-            </button>
-            
+            </a>
+
           </div>
         </div>
       </section>

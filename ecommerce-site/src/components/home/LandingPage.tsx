@@ -158,9 +158,7 @@ const LandingPage = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Shop by <span className="text-pink-600 dark:text-pink-400">Category</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore our wide range of carefully curated collections
-          </p>
+          
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -234,9 +232,7 @@ const FeaturedProductsSection: React.FC = () => {
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Our <span className="text-pink-600 dark:text-pink-400">Featured Products</span>
         </h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Handpicked selections and top sellers you won't want to miss!
-        </p>
+       
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
