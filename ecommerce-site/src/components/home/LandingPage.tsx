@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ShoppingBag, Star, Truck, Shield, Headphones, Zap, TrendingUp, Gift } from 'lucide-react';
 
 const LandingPage = () => {
@@ -11,7 +12,7 @@ const LandingPage = () => {
       name: 'Premium Wireless Headphones',
       price: 199.99,
       originalPrice: 299.99,
-      image: '/api/placeholder/300/300',
+      image: '/1.png',
       rating: 4.8,
       reviews: 1247
     },
@@ -20,7 +21,7 @@ const LandingPage = () => {
       name: 'Smart Fitness Watch',
       price: 149.99,
       originalPrice: 199.99,
-      image: '/api/placeholder/300/300',
+      image: '/2.png',
       rating: 4.9,
       reviews: 892
     },
@@ -29,7 +30,7 @@ const LandingPage = () => {
       name: 'Portable Bluetooth Speaker',
       price: 79.99,
       originalPrice: 119.99,
-      image: '/api/placeholder/300/300',
+      image: '/3.png',
       rating: 4.7,
       reviews: 634
     }
@@ -185,10 +186,110 @@ const LandingPage = () => {
 
       <br></br><br></br>
 
-
+      {/* Featured Products Section */}
+      <FeaturedProductsSection />
 
     </div>
   );
 };
 
 export default LandingPage;
+
+
+const FeaturedProductsSection: React.FC = () => {
+  const featuredProducts = [
+    {
+      id: '1',
+      name: 'Backpack',
+      price: 199.99,
+      originalPrice: 299.99,
+      image: '/1.png',
+      rating: 4.8,
+      reviews: 1247
+    },
+    {
+      id: '2',
+      name: 'Mens Casual Premium Slim Fit T-Shirts',
+      price: 149.99,
+      originalPrice: 199.99,
+      image: '/2.png',
+      rating: 4.9,
+      reviews: 892
+    },
+    {
+      id: '3',
+      name: ' Mens Cotton Jacket',
+      price: 79.99,
+      originalPrice: 119.99,
+      image: '/3.png',
+      rating: 4.7,
+      reviews: 634
+    }
+  ];
+ 
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our <span className="text-pink-600 dark:text-pink-400">Featured Products</span>
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Handpicked selections and top sellers you won't want to miss!
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredProducts.map((product) => (
+          <Link
+            key={product.id}
+            href={`/products/${product.id}`}
+            className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-1"
+          >
+            <div className="aspect-square bg-gray-100 dark:bg-gray-700 overflow-hidden relative">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute top-2 left-2 bg-pink-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                ⭐ {product.rating}
+              </div>
+            </div>
+            
+            <div className="p-4">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1 line-clamp-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
+                {product.name}
+              </h3>
+              <div className="flex items-center space-x-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className={`w-4 h-4 ${
+                      i < Math.floor(product.rating)
+                        ? 'fill-yellow-400 text-yellow-400'
+                        : 'text-gray-300 dark:text-gray-600'
+                    }`} 
+                  />
+                ))}
+                <span className="text-sm text-gray-500 dark:text-gray-400">({product.reviews})</span>
+              </div>
+              <div className="flex items-baseline space-x-2">
+                <span className="text-xl font-bold text-pink-600 dark:text-pink-400">
+                  ${product.price.toFixed(2)}
+                </span>
+                {product.originalPrice && (
+                  <span className="text-sm text-gray-500 dark:text-gray-400 line-through">
+                    ${product.originalPrice.toFixed(2)}
+                  </span>
+                )}
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
