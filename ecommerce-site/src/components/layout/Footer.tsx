@@ -48,33 +48,21 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               <Link href="/categories" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Categories
               </Link>
-              <Link href="/deals" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                Special Deals
-              </Link>
-              <Link href="/new-arrivals" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                New Arrivals
-              </Link>
+              
             </div>
           </div>
 
           {/* Customer Service */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Customer Service</h3>
-            <div className="space-y-2">
-              <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                Contact Us
-              </Link>
-              <Link href="/shipping" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                Shipping Info
-              </Link>
-              <Link href="/returns" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                Returns & Exchanges
-              </Link>
-              <Link href="/faq" className="block text-gray-300 hover:text-white transition-colors text-sm">
-                FAQ
-              </Link>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Customer Service</h3>
+              <div className="space-y-2">
+                <p className="block text-gray-300 text-sm">Contact Us</p>
+                <p className="block text-gray-300 text-sm">Shipping Info</p>
+                <p className="block text-gray-300 text-sm">Returns & Exchanges</p>
+                <p className="block text-gray-300 text-sm">FAQ</p>
+              </div>
             </div>
-          </div>
+
 
           {/* Contact Info */}
           <div className="space-y-4">

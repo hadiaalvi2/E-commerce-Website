@@ -51,7 +51,7 @@ interface Product {
     }
   }, [categoryName]);
 
-  // Filter and sort products
+
   useEffect(() => {
     let filtered = products.filter(product => 
       product.title.toLowerCase().includes(searchTerm.toLowerCase())
