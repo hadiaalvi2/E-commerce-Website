@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://shophub.com',
-    title: 'ShopHub - Your Premier E-commerce Destination',
+    title: 'Shopie - Your Premier E-commerce Destination',
     description: 'Discover amazing products at unbeatable prices. Premium shopping with exclusive deals.',
     siteName: 'ShopHub',
     images: [
@@ -128,7 +128,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "ShopHub",
+              "name": "Shopie",
               "url": "https://shophub.com",
               "logo": "https://shophub.com/logo.png",
               "sameAs": [
