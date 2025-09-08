@@ -76,8 +76,8 @@ const ProductDetailsPage = () => {
   if (loading) {
     return (
       <MainLayout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600"></div>
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-pink-600 dark:border-pink-400"></div>
         </div>
       </MainLayout>
     );
@@ -86,7 +86,7 @@ const ProductDetailsPage = () => {
   if (!product) {
     return (
       <MainLayout>
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Product Not Found</h1>
             <p className="text-gray-600 dark:text-gray-300 mb-8">The product you're looking for doesn't exist.</p>
@@ -101,18 +101,18 @@ const ProductDetailsPage = () => {
 
   return (
     <MainLayout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-background text-foreground">
         {/* Breadcrumb */}
         <div className="mb-6">
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-gray-500 hover:text-pink-600 transition-colors">Home</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
             <Link href="/products" className="text-gray-500 hover:text-pink-600 transition-colors">Products</Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
             <Link href={`/categories/${product.category}`} className="text-gray-500 hover:text-pink-600 transition-colors capitalize">
               {product.category}
             </Link>
-            <span className="text-gray-400">/</span>
+            <span className="text-gray-400 dark:text-gray-500">/</span>
             <span className="text-gray-900 dark:text-white font-medium truncate">{product.title}</span>
           </nav>
         </div>
@@ -173,7 +173,7 @@ const ProductDetailsPage = () => {
                       className={`w-5 h-5 ${
                         i < Math.floor(product.rating.rate) 
                           ? 'fill-yellow-400 text-yellow-400' 
-                          : 'text-gray-300'
+                          : 'text-gray-300 dark:text-gray-600'
                       }`} 
                     />
                   ))}
@@ -213,7 +213,7 @@ const ProductDetailsPage = () => {
                   >
                     <Minus className="h-4 w-4" />
                   </button>
-                  <span className="px-4 py-2 font-medium min-w-[60px] text-center">
+                  <span className="px-4 py-2 font-medium min-w-[60px] text-center text-gray-900 dark:text-white">
                     {quantity}
                   </span>
                   <button
@@ -318,7 +318,7 @@ const ProductDetailsPage = () => {
                       </span>
                       <div className="flex items-center">
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span className="text-sm text-gray-500 ml-1">
+                        <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">
                           {relatedProduct.rating.rate}
                         </span>
                       </div>

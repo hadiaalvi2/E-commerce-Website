@@ -15,7 +15,7 @@ const Custom404Page = () => {
 
   return (
     <MainLayout>
-      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-background text-foreground">
         <div className="max-w-4xl w-full text-center">
           {/* 404 Illustration */}
           <div className="mb-8">
@@ -102,21 +102,21 @@ const Custom404Page = () => {
           </div>
 
           {/* Search Section */}
-          <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-white">
+          <div className="bg-gradient-to-r from-pink-600 to-purple-600 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 lg:p-12 text-white dark:text-gray-100">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Still Can't Find What You're Looking For?
             </h3>
-            <p className="text-pink-100 text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-pink-100 dark:text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
               Try our powerful search feature or browse our categories to discover amazing products
             </p>
             
             <div className="max-w-md mx-auto mb-6">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 dark:text-gray-500" />
                 <input
                   type="text"
                   placeholder="Search for products..."
-                  className="w-full pl-10 pr-4 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-pink-300 text-lg"
+                  className="w-full pl-10 pr-4 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-pink-300 text-lg dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400"
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
                       const query = (e.target as HTMLInputElement).value;
@@ -132,13 +132,13 @@ const Custom404Page = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/categories"
-                className="bg-white text-pink-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold transition-colors"
+                className="bg-white text-pink-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold transition-colors dark:bg-pink-600 dark:text-white dark:hover:bg-pink-700"
               >
                 Browse Categories
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-6 py-3 rounded-xl font-semibold transition-colors"
+                className="border-2 border-white text-white hover:bg-white hover:text-pink-600 px-6 py-3 rounded-xl font-semibold transition-colors dark:border-pink-400 dark:text-pink-400 dark:hover:bg-pink-400 dark:hover:text-white"
               >
                 Contact Support
               </Link>

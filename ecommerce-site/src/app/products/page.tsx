@@ -190,8 +190,8 @@ const ProductsPage = () => {
 
         {/* Products Grid/List */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
+          <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
               No products found
             </h3>
@@ -241,7 +241,7 @@ const ProductsPage = () => {
                             className={`w-4 h-4 ${
                               i < Math.floor(product.rating.rate) 
                                 ? 'fill-yellow-400 text-yellow-400' 
-                                : 'text-gray-300'
+                                : 'text-gray-300 dark:text-gray-600'
                             }`} 
                           />
                         ))}
