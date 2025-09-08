@@ -183,77 +183,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Featured Products Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="text-pink-600 dark:text-pink-400">Products</span>
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Hand-picked favorites that our customers love most
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProducts.map((product) => (
-            <div key={product.id} className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="relative overflow-hidden bg-gray-100 dark:bg-gray-700 aspect-square">
-                <div className="absolute inset-0 bg-gradient-to-br from-cream-100 to-cream-200 dark:from-gray-600 dark:to-gray-700"></div>
-                <div className="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  SALE
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <ShoppingBag className="w-24 h-24 text-pink-400 dark:text-pink-600" />
-                </div>
-              </div>
-              
-              <div className="p-6 space-y-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
-                    {product.name}
-                  </h3>
-                  <div className="flex items-center space-x-2">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
-                      ({product.reviews} reviews)
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl font-bold text-pink-600 dark:text-pink-400">
-                    ${product.price}
-                  </span>
-                  <span className="text-lg text-gray-400 line-through">
-                    ${product.originalPrice}
-                  </span>
-                  <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-2 py-1 rounded-full text-sm font-semibold">
-                    Save ${(product.originalPrice - product.price).toFixed(0)}
-                  </span>
-                </div>
-
-                <button className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform group-hover:scale-105">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link 
-            href="/products"
-            className="inline-flex items-center space-x-2 bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            <span>View All Products</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
 
       {/* Newsletter Section */}
       <section className="gray-900">
