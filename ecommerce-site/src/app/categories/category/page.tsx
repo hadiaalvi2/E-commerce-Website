@@ -20,7 +20,7 @@ interface Product {
   };
 }
 
-const CategoryProductsPage = () => {
+  const CategoryProductsPage = () => {
   const params = useParams();
   const categoryName = decodeURIComponent(params.category as string);
   const [products, setProducts] = useState<Product[]>([]);
