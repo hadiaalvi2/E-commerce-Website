@@ -40,17 +40,17 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
               }`}>
                 About
               </Link>
+               <Link href="/categories" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
+                darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
+              }`}>
+                Categories
+              </Link>
               <Link href="/products" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
                 darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
               }`}>
                 Products
               </Link>
-              <Link href="/categories" className={`hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-sm font-medium ${
-                darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
-              }`}>
-                Categories
-              </Link>
-              
+ 
             </div>
           </div>
 
