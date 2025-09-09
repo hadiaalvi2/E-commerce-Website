@@ -116,15 +116,16 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
               >
                 Home
               </Link>
-              <Link 
-                href="/products" 
+               <Link 
+                href="/about" 
                 className={`block hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-base font-medium ${
                   darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Products
+                About
               </Link>
+             
               <Link 
                 href="/categories" 
                 className={`block hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-base font-medium ${
@@ -134,15 +135,16 @@ const Navbar: React.FC<NavbarProps> = ({ cartItemsCount, darkMode, toggleDarkMod
               >
                 Categories
               </Link>
-              <Link 
-                href="/about" 
+               <Link 
+                href="/products" 
                 className={`block hover:text-pink-500 transition-colors px-3 py-2 rounded-md text-base font-medium ${
                   darkMode ? 'text-gray-300 hover:text-pink-400' : 'text-gray-700 hover:text-pink-600'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Products
               </Link>
+             
             </div>
           </div>
         )}
