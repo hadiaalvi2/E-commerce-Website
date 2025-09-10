@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ShoppingBag, Star, Truck, Shield, Headphones, Zap, TrendingUp, Gift } from 'lucide-react';
+import { askForNotificationPermission, subscribeUserToPush } from "@/utils/pushNotifications";
 
 const LandingPage = () => {
   const featuredProducts = [
@@ -61,6 +62,20 @@ const LandingPage = () => {
     }
   ];
 
+  const handleSubscribeClick = async () => {
+    console.log("Subscribe button clicked!");
+    try {
+      const permission = await askForNotificationPermission();
+      if (permission === 'granted') {
+        await subscribeUserToPush();
+      } else {
+        console.log("Notification permission not granted.");
+      }
+    } catch (error) {
+      console.error("Error during push notification subscription process:", error);
+    }
+  };
+
   return (
     <div className="space-y-20 bg-background text-foreground">
       {/* Hero Section */}
@@ -81,22 +96,31 @@ const LandingPage = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/products"
-                  className="group bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <span>Shop Now</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link 
-                  href="/categories"
-                  className="border-2 border-gray-600 hover:border-pink-600 text-gray-700 hover:text-pink-600 dark:text-gray-300 dark:border-gray-500 dark:hover:border-pink-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center"
-                >
-                  Browse Categories
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+  <Link
+    href="/products"
+    className="group w-full sm:w-auto min-w-[180px] bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-medium sm:font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+  >
+    <span>Shop Now</span>
+    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+  </Link>
+
+  <Link
+    href="/categories"
+    className="group w-full sm:w-auto min-w-[220px] bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-medium sm:font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+  >
+    Browse Categories
+  </Link>
+
+  <button
+    onClick={handleSubscribeClick}
+    className="w-full sm:w-auto min-w-[180px] border-2 border-gray-600 hover:border-pink-600 text-gray-700 hover:text-pink-600 dark:text-gray-300 dark:border-gray-500 dark:hover:border-pink-600 px-6 py-3 rounded-full font-medium sm:font-semibold text-sm sm:text-base transition-all duration-300 flex items-center justify-center"
+  >
+    
+    Subscribe to Notifications
+  </button>
+</div>
+
 
               <div className="flex items-center space-x-8 pt-8">
                 <div className="text-center">

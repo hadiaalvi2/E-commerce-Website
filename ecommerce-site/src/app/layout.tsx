@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import { CartProvider } from "@/context/CartProvider";
+import ServiceWorkerRegistrar from '@/components/ServiceWorkerRegistrar'; 
 
 export const metadata: Metadata = {
   title: {
@@ -171,10 +172,11 @@ export default function RootLayout({
         <ThemeProvider>
           <CartProvider>
             <div className="flex flex-col min-h-screen">{children}</div>
+            <ServiceWorkerRegistrar /> 
           </CartProvider>
         </ThemeProvider>
 
-        {/* Prevent FOUC for theme */}
+       
         <script
           dangerouslySetInnerHTML={{
             __html: `
